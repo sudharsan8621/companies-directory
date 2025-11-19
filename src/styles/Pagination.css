@@ -1,0 +1,108 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.pagination button {
+  min-width: 40px;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #495057;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.pagination button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f8f9fa;
+  color: #adb5bd;
+}
+
+.pagination button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.pagination button:first-child,
+.pagination button:last-child {
+  padding: 8px 16px;
+  min-width: auto;
+}
+
+/* Add icons for previous/next */
+.pagination button:first-child::before {
+  content: '← ';
+}
+
+.pagination button:last-child::after {
+  content: ' →';
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 15px;
+  }
+
+  .pagination button {
+    min-width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .pagination button:first-child,
+  .pagination button:last-child {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    padding: 10px;
+  }
+
+  .pagination button {
+    min-width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .pagination button:first-child::before,
+  .pagination button:last-child::after {
+    content: '';
+  }
+}

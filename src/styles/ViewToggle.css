@@ -1,0 +1,63 @@
+.view-toggle {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.view-toggle button {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #6c757d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-toggle button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s;
+  z-index: -1;
+}
+
+.view-toggle button:hover {
+  color: #495057;
+  background: #f8f9fa;
+}
+
+.view-toggle button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.view-toggle button.active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .view-toggle {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .view-toggle button {
+    flex: 1;
+    padding: 10px;
+  }
+}
