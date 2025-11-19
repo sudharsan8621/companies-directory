@@ -6,7 +6,7 @@ A modern, responsive React application for browsing and filtering companies acro
 
 ## 🌟 Live Demo
 
-🔗 **[View Live Application](https://companies-directory.vercel.app)**
+🔗 **[View Live Application](https://companies-directory-six.vercel.app/)**
 
 ## 📸 Screenshots
 
